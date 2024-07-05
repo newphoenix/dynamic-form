@@ -1,0 +1,38 @@
+<form class="form" role="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      
+    @for(field of fields; track field){    
+      
+            @switch(true){
+                @case(['text', 'email', 'password', 'date' , 'number', 'time', 'range'].includes(field.type)){
+                  <app-dynamic-input [formName]="form" [field]="field" [validationMessages]="validationMessages" [specialValidationMessages]="specialValidationMessages"></app-dynamic-input>                   
+                }
+                @case(field.type === 'file'){
+                  <app-dynamic-file-input [formName]="form" [field]="field"
+                      [validationMessages]="validationMessages" [specialValidationMessages]="specialValidationMessages"
+                      (fileFieldData)="setFormFileField($event)"></app-dynamic-file-input>
+                }
+                @case(field.type ==='select' ){
+                  <app-dynamic-select [formName]="form" [field]="field" [validationMessages]="validationMessages"></app-dynamic-select>
+                }
+                @case(field.type ==='checkbox' ){
+                  <app-dynamic-checkbox [formName]="form" [field]="field" [validationMessages]="validationMessages"></app-dynamic-checkbox>
+                }
+                @case(field.type ==='radio' ){
+                  <app-dynamic-radio [formName]="form" [field]="field" [validationMessages]="validationMessages"></app-dynamic-radio>
+                }
+                @case(field.type ==='textarea' ){
+                  <app-dynamic-textarea [formName]="form" [field]="field" [validationMessages]="validationMessages"></app-dynamic-textarea>
+                }
+                
+            }
+    }
+
+
+
+    <div class="form-group">
+      <button  class="btn btn-success btn-lg float-right mb-3">                                        
+          Register
+      </button>        
+  </div>
+
+</form>
