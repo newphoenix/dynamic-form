@@ -16,7 +16,7 @@ import { DynamicInputComponent } from './components/dynamic/dynamic-input/dynami
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
     FormFactoryComponent,
     DynamicFormAllComponent,
     DynamicCheckboxComponent,
@@ -32,7 +32,7 @@ import { DynamicInputComponent } from './components/dynamic/dynamic-input/dynami
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-   
+
   ],
   providers: [],
   bootstrap: [AppComponent]

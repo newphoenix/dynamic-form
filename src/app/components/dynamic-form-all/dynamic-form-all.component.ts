@@ -9,12 +9,12 @@ import { ModelService } from '../../services/model.service';
 })
 export class DynamicFormAllComponent {
 
-  model : any; 
+  model: any;
 
-  constructor(private modelService: ModelService){
+  constructor(private modelService: ModelService) {
     this.modelService.getModel().subscribe({
-      next: (data) => {this.model = data;}
+      next: (data) => { this.model = data; }
     });
   }
-  
+
 }

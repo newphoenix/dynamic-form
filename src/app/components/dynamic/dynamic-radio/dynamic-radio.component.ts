@@ -8,9 +8,9 @@ import { BaseComponent } from '../base/base.component';
   templateUrl: './dynamic-radio.component.html',
   styleUrl: './dynamic-radio.component.css'
 })
-export class DynamicRadioComponent extends BaseComponent{
+export class DynamicRadioComponent extends BaseComponent {
 
-  constructor(){
+  constructor() {
     super();
   }
 

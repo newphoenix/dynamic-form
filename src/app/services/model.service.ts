@@ -110,13 +110,13 @@ export class ModelService {
           }
         },
         reward: {
-          array: true, value: ['aa','bb'], label: 'Rewards', type: 'text'          
+          array: true, value: ['aa', 'bb'], label: 'Rewards', type: 'text'
         },
         contact: {
           value: 'abc cba', label: 'Contact', type: 'textarea',
           rules: {
             required: true
-          }          
+          }
         }
       },
       cross_field_validation:

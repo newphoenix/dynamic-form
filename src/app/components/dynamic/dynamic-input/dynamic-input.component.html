@@ -1,7 +1,7 @@
 <form [formGroup]="formName()" class="mb-3 mt-3">
     @if(field().array){
     <!-- Array of fields that can expand-->
-    <label [for]="field()['fieldName']">{{field()['label']}}</label>
+    <h5>{{field()['label']}}</h5>
     <div [formArrayName]="field()['fieldName']" class="form-group"
         *ngFor="let data of fieldFormArray(field()['fieldName']).controls; let i=index">
         <div class="row mt-2 mb-2">
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="col mb-2 mt-2">
+    <div class="col mb-5 mt-2">
         <div class="form-group">
             <button (click)="addROW(field()['fieldName'])" class="btn btn-primary btn-md">
                 + {{field()['fieldName']}}

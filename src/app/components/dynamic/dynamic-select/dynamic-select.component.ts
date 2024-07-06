@@ -8,9 +8,9 @@ import { BaseComponent } from '../base/base.component';
   templateUrl: './dynamic-select.component.html',
   styleUrl: './dynamic-select.component.css'
 })
-export class DynamicSelectComponent extends BaseComponent{
+export class DynamicSelectComponent extends BaseComponent {
 
-  constructor(){
+  constructor() {
     super();
   }
 

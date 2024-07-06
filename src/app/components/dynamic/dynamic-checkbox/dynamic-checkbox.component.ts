@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormArray } from '@angular/forms';
 import { BaseComponent } from '../base/base.component';
 
@@ -7,15 +7,15 @@ import { BaseComponent } from '../base/base.component';
   templateUrl: './dynamic-checkbox.component.html',
   styleUrl: './dynamic-checkbox.component.css'
 })
-export class DynamicCheckboxComponent extends BaseComponent{
+export class DynamicCheckboxComponent extends BaseComponent {
 
-  constructor(){
+  constructor() {
     super();
   }
 
-  get checkboxes(){  
+  get checkboxes() {
     return this.formName().controls[this.field().fieldName] as FormArray;
   }
 
-    
+
 }

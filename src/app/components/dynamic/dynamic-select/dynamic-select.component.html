@@ -2,13 +2,15 @@
     <div class="form-group mb-3 mt-3">
 
 
-    <label>{{field().label}}:</label>
-    <select class="form-control" [formControlName]="field().fieldName" [ngClass]="{'is-invalid': formNameControl.errors && (formNameControl.dirty || formNameControl.touched)}">
-        <option *ngFor="let option of field().options" [value]="option.value">
-            {{option.label}}
-        </option>
-    </select>
-    <app-dynamic-error class="invalid-feedback" [formName]="formName()" [fieldName]="field().fieldName" [validationMessages]="validationMessages()"></app-dynamic-error>
+        <label>{{field().label}}:</label>
+        <select class="form-control" [formControlName]="field().fieldName"
+            [ngClass]="{'is-invalid': formNameControl.errors && (formNameControl.dirty || formNameControl.touched)}">
+            <option *ngFor="let option of field().options" [value]="option.value">
+                {{option.label}}
+            </option>
+        </select>
+        <app-dynamic-error class="invalid-feedback" [formName]="formName()" [fieldName]="field().fieldName"
+            [validationMessages]="validationMessages()"></app-dynamic-error>
 
     </div>
 </form>

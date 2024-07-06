@@ -31,11 +31,11 @@ export class DynamicFileInputComponent extends BaseComponent {
 
   fieldFormControl(fieldName: string) { return this.formName().get(fieldName) as FormControl; }
 
-  fileName(fieldName: string){  
+  fileName(fieldName: string) {
     return this.formName().controls[fieldName].value.name;
   }
 
-  clickFileInput(){
+  clickFileInput() {
     let element = document.getElementById(this.field().fieldName) as HTMLElement;
     element.click();
   }
@@ -43,8 +43,8 @@ export class DynamicFileInputComponent extends BaseComponent {
   captureFile($event) {
     if ($event.target.files.length == 1) {
       const file: File = $event.target.files[0]
-      let fileOutput : FileOutput = { fieldKey : this.field().fieldName, file : file};
-      this.fileFieldData.emit(fileOutput)      
+      let fileOutput: FileOutput = { fieldKey: this.field().fieldName, file: file };
+      this.fileFieldData.emit(fileOutput)
     }
 
   }

@@ -1,5 +1,5 @@
 export interface FileOutput {
 
-    fieldKey : string;
-    file : File;
+    fieldKey: string;
+    file: File;
 }

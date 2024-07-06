@@ -10,11 +10,11 @@ import { ValidationMessage } from '../../../interfaces/validation-message';
 export class BaseComponent {
 
   field = input.required<any>();
-  formName  = input.required<FormGroup<any>>();
-  validationMessages = input.required<Map<string,Map<string,ValidationMessage>>>();
+  formName = input.required<FormGroup<any>>();
+  validationMessages = input.required<Map<string, Map<string, ValidationMessage>>>();
 
 
-  get formNameControl(){
+  get formNameControl() {
     return this.formName().controls[this.field().fieldName];
   }
 

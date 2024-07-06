@@ -10,21 +10,21 @@ import { SpecialRuleError } from '../../../interfaces/special-rule-error';
 })
 export class DynamicErrorComponent {
 
-  formName =  input.required<FormGroup<any>>();
+  formName = input.required<FormGroup<any>>();
   fieldName = input.required<string>();
-  validationMessages = input.required<Map<string,Map<string,ValidationMessage>>>();
-  specialValidationMessages = input<Map<string,SpecialRuleError[]>>();
+  validationMessages = input.required<Map<string, Map<string, ValidationMessage>>>();
+  specialValidationMessages = input<Map<string, SpecialRuleError[]>>();
 
-  get formNameControl(){  
+  get formNameControl() {
     return this.formName().controls[this.fieldName()];
-   }
+  }
 
-   getKeys(map): string[]{
-     return Array.from(map().keys());
-   }
+  getKeys(map): string[] {
+    return Array.from(map().keys());
+  }
 
-   getFieldCrossErrors(field): SpecialRuleError[] | undefined{
+  getFieldCrossErrors(field): SpecialRuleError[] | undefined {
     return this.specialValidationMessages()?.get(field);
-   }   
+  }
 
 }
