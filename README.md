@@ -35,7 +35,7 @@ Example for creating an login form with user name and password
 }
 ```
 
-# Form Vaidation
+# Form Validation
 
 Two types of validatons are available : field and crossfield validations:
 Example of registration form with field and crossfield validaiton:
